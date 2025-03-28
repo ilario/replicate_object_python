@@ -1,0 +1,29 @@
+[project]
+name = "replicate_object"
+version = "2025.03.28"
+authors = [
+  { name= "Ilario Gelmetti", email = "ilario@sindominio.net" }
+]
+description = "Create an identical but independent copy of an object in Python"
+readme = "README.md"
+requires-python = ">=3.0"
+license = "AGPL-3.0"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/ilario/replicate_object_python"
+"Bug Tracker" = "https://github.com/ilario/replicate_object_python/issues"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# https://docs.pytest.org/en/7.1.x/explanation/goodpractices.html#tests-outside-application-code
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
